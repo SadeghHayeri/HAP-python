@@ -28,8 +28,6 @@ def get_bridge():
     bridge.add_accessory( NodeMCUSwitch("Relay 3", URL="http://192.168.1.11", switchIndex=3) )
     bridge.add_accessory( NodeMCUSwitch("Relay 4", URL="http://192.168.1.11", switchIndex=4) )
 
-
-
     return bridge
 
 acc = get_bridge()  # Change to get_bridge() if you want to run a Bridge.
