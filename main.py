@@ -12,6 +12,7 @@ import signal
 # from pyhap.accessories.LightBulb import LightBulb
 # from pyhap.accessories.ShutdownSwitch import ShutdownSwitch
 from pyhap.accessories.TemperatureSensor import TemperatureSensor
+from pyhap.accessories.nodeMCUGarage import NodeMCUGarage
 from pyhap.accessories.nodeMCUSwitch import NodeMCUSwitch
 from pyhap.accessory import Bridge
 from pyhap.accessory_driver import AccessoryDriver
@@ -27,6 +28,8 @@ def get_bridge():
     bridge.add_accessory( NodeMCUSwitch("Relay 2", URL="http://192.168.1.11", switchIndex=2) )
     bridge.add_accessory( NodeMCUSwitch("Relay 3", URL="http://192.168.1.11", switchIndex=3) )
     bridge.add_accessory( NodeMCUSwitch("Relay 4", URL="http://192.168.1.11", switchIndex=4) )
+
+    bridge.add_accessory( NodeMCUGarage("Garage", URL="http://192.168.1.11") )
 
     return bridge
 
